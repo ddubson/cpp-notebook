@@ -13,3 +13,5 @@ clean:
 
 launch-docs:
 	mkdocs serve
+
+all: run-hello-world

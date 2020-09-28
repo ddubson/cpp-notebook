@@ -1,2 +1,9 @@
 site_name: C++ Notebook
 theme: readthedocs
+nav:
+  - 'Hello World': 'index.md'
+  - 'Variables': 'variables.md'
+  - 'Conditionals': 'conditionals.md'
+  - 'Functions': 'functions.md'
+markdown_extensions:
+  - admonition

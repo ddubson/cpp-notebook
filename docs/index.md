@@ -53,6 +53,13 @@ MacOs:
 - clang++ (via XCode)
 - gcc (install via Homebrew)
 
+## C++ language attributes
+
+- **Object-oriented language** - its bread and butter is to support object orientation, 
+building up on plain C
+- **Strongly-typed language** - every primitive and object has a defined type
+
+
 ---
 
 `stdlib` - C++ standard library, which is split into three parts:
