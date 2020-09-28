@@ -1,0 +1,2 @@
+launch-docs:
+	mkdocs serve
