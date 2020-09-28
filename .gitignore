@@ -128,3 +128,4 @@ modules.xml
 # End of https://www.toptal.com/developers/gitignore/api/c++,intellij+all
 
 site/
+bin/**
