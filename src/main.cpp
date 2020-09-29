@@ -16,6 +16,20 @@ int main() {
 
     counter = doubleTheCounter(counter);
     printf("The counter is doubled at %d\n", counter);
+
+    int my_array[] = { 1, 2, 3, 4, 5 };
+    printf("The 2nd element is %d\n", my_array[1]);
+
+    int sum = 0;
+    for(size_t i = 0; i < 100; i++) {
+        sum += 2;
+    }
+
+    for(int x : my_array) {
+        printf("Array value: %d\n", x);
+    }
+    printf("The sum is %d\n", sum);
+
     return 0;
 }
 
