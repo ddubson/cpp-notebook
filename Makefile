@@ -8,6 +8,9 @@ run-hello-world-g++:
 	@g++ src/main.cpp -o bin/hello-world
 	@bin/hello-world
 
+debug-hello-world:
+	lldb bin/hello-world
+
 clean:
 	rm bin/**
 
