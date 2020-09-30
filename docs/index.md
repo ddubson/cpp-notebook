@@ -53,6 +53,15 @@ MacOs:
 - clang++ (via XCode)
 - gcc (install via Homebrew)
 
+### Language standards
+
+C++ has multiple successive versions with added features in each. To switch to a specific C++ standard,
+tell the compiler to do so like so:
+
+```bash
+clang++ --std=C++11 main.cpp -o main
+```
+
 ## C++ language attributes
 
 - **Object-oriented language** - its bread and butter is to support object orientation, 

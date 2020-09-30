@@ -2,6 +2,7 @@
 
 // Function prototype/signature
 int doubleTheCounter(int);
+void sizeOfArrays();
 
 int main() {
     printf("Hello, world!\n");
@@ -30,9 +31,16 @@ int main() {
     }
     printf("The sum is %d\n", sum);
 
+    sizeOfArrays();
     return 0;
 }
 
 int doubleTheCounter(int counter) {
     return counter * 2;
+}
+
+void sizeOfArrays() {
+    int ar[] = { 1, 2, 3, 4, 5 };
+    size_t n_elements = sizeof(ar) / sizeof(int); // used a lot in older code, a hack
+    printf("The number of elements in the array is: %zu\n", n_elements);
 }

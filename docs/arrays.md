@@ -28,3 +28,15 @@ Access via the bracket syntax
 int my_array[] = { 1, 2, 3, 4, 5 };
 printf("The 2nd element is %d", my_array[1]);
 ```
+
+## Size of arrays
+
+The `sizeof` operator is used to obtain the total number of bytes in aggregate in an array.
+The evaluation is a compile-time eval with no cost during runtime.
+
+```c++
+int ar[] = { 1, 2, 3, 4, 5 };
+size_t n_elements = sizeof(ar) / sizeof(int); // used a lot in older code, a hack
+```
+
+The `std::size` function from the `<iterator>` header is a more modern approach

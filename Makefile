@@ -1,11 +1,11 @@
 run-hello-world:
 	@echo "Compiling via clang++"
-	@clang++ src/main.cpp -o bin/hello-world
+	@clang++ --std=c++11 src/main.cpp -o bin/hello-world
 	@bin/hello-world
 
 run-hello-world-g++:
 	@echo "Compiling via G++"
-	@g++ src/main.cpp -o bin/hello-world
+	@g++ --std=c++11 src/main.cpp -o bin/hello-world
 	@bin/hello-world
 
 debug-hello-world:
