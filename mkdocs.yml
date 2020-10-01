@@ -2,10 +2,15 @@ site_name: C++ Notebook
 theme: readthedocs
 nav:
   - 'Hello World': 'index.md'
-  - 'Types & Variables': 'types-n-variables.md'
+  - 'Variables': 'variables.md'
   - 'Conditionals & Branching': 'conditionals.md'
   - 'Functions': 'functions.md'
-  - 'Arrays': 'arrays.md'
   - 'Loops': 'loops.md'
+  - 'Fundamental Types':
+    - 'Types & Variables': 'fundamental_types/primitives.md'
+    - 'Arrays': 'fundamental_types/arrays.md'
+    - 'Structs': 'fundamental_types/structs.md'
+  - 'Reference Types':
+    - 'Classes': 'reference_types/classes.md'
 markdown_extensions:
   - admonition

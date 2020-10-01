@@ -58,11 +58,30 @@ struct Book {
     int year;
 };
 
+struct Phone {
+    char model;
+    char owner[9] = {"John Doe"};
+    int countryCode{1}; // short hand initialize to value 1
+    int number[6]{3, 3, 3, 2, 2, 2}; // standard way of initializing
+    bool blocked = false;
+
+    Phone(char model) {
+        this->model = model;
+    };
+};
+
 void structs() {
-    Book myBook; // Auto initialized
+    Book myBook{}; // Auto initialized
     myBook.year = 1999;
     printf("The book year is %d\n", myBook.year);
+
+    Phone phone{'a'};
+    printf("The phone model is %c\n", phone.model);
 };
+
+
+
+
 
 union Variant {
     int integer;

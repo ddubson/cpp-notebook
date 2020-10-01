@@ -1,35 +1,9 @@
-# Types & Variables
-
-## Variables
-
-### Declaring
-
-To declare a variable is to define it in the program.
-In C++, you must provide the type of the variable first
-
-```c++
-int counter;
-```
-
-### Initializing
-
-To initialize a variable is to bind it to a value;
-
-```c++
-// Declare and initialize
-int counter = 0;
-
-// Initialize after declaration
-int counter;
-counter = 0;
-```
-
-## Primitive types
+# Primitive types
 
 Primitive types try to map a direct relationship to the hardware, such as `int` or `Boolean`.
 Underneath the hood, the sizes of types differ by the architecture of the CPU.
 
-### Integer types
+## Integer types
 
 Store whole numbers. Any of them can be signed or unsigned. There are 4 different sizes of integers:
 
@@ -38,7 +12,7 @@ Store whole numbers. Any of them can be signed or unsigned. There are 4 differen
 - long int
 - long long int
 
-### Floating point types
+## Floating point types
 
 Store fractional numbers. Fractional numbers are approximations, and the more of the number that is stored
 in memory, the more precise it is (hence the name for floating point **precision**)
@@ -49,7 +23,7 @@ C++ has 3 levels of floating point precision:
 - double - double precision (no suffix, i.e. `1.2`)
 - long double - extended precision (suffix with L, i.e. `1.2L`)
 
-### Character types
+## Character types
 
 Store human language data, encoded by some standard like ASCII or Unicode.
 
@@ -62,13 +36,13 @@ Six C++ character types are:
 - unsigned char
 - wchar_t - large enough to contain the largest character in the current locale (i.e. Unicode)
 
-### Boolean types
+## Boolean types
 
 Stores either 'true' or 'false'
 
 goes by `bool`
 
-### Comparison operators
+## Comparison operators
 
 Available operators in C++ are:
 
@@ -76,7 +50,7 @@ Available operators in C++ are:
 - **!=** - inequality operator
 - **>,<,>=,<=** - greater than (or equal to), less than (or equal to)
 
-### Logical operators
+## Logical operators
 
 Evaluate boolean logic on bool types
 
@@ -89,13 +63,13 @@ Operators are:
 - ! - NOT (unary)
 - AND, OR - binary
 
-### The std::byte type
+## The std::byte type
 
 Raw memory bit type which allows for bitwise logic operations.
 
 The std::byte comes from the library `cstddef` (standard definitions)
 
-### size_t type
+## size_t type
 
 size_t type comes from library `cstddef` and allows the coder to encode size of objects.
 It can accommodate the largest of types of a given architecture
@@ -104,7 +78,7 @@ Unary operator `sizeof` takes a type operand and returns its size as `size_t` ty
 
 Format specifier: `%zd`
 
-### void type
+## void type
 
 C++ void type is an empty set of values (akin to a `Unit` (Kotlin) or `()` (Haskell) types in 
 other languages)
@@ -112,11 +86,11 @@ other languages)
 A value cannot be assigned to a void but a function can potentially return nothing, hence having
 a `void` return type.
 
-### User-defined types
+## User-defined types
 
 There are 3 categories of user-defined types:
 
-#### Enumerations
+### Enumerations
 
 A set of possible values; great for creating categorical concepts.
 
@@ -135,7 +109,7 @@ enum class Color {
 Color color = Color::RED;
 ```
 
-Use [switch statement](conditionals.md) to conditionally branch based on enum value
+Use [switch statement](../conditionals.md) to conditionally branch based on enum value
 
 ```c++
 Color color = Color::RED;
@@ -152,29 +126,7 @@ switch (color) {
 }
 ```
 
-#### Structs
-
-Classes contain data and functions (state and behavior).
- 
-Simplest kind of class is a POD -- (Plain old data classes)
-
-```c++
-struct Book {
-    char name[256];
-    int year;
-    int pages;
-};
-
-# Declaring
-int main() {
-    Book myBook; // Auto initialized
-    myBook.year = 1999;
-    printf("The book year is %d", myBook.year)
-    return 0;
-}
-```
-
-#### Unions 🔥
+### Unions 🔥
 
 !!!warning
     Avoid using Unions -- they lead to dangerous memory corruption if not properly handled 🔥
@@ -206,15 +158,5 @@ This is read as `Variant` may either have:
 - a floating point number 
 
 at any time. It cannot have multiple values.
-
-## Classes
-
-### Methods
-
-### Access controls
-
-### Constructors
-
-### Destructors
 
 
