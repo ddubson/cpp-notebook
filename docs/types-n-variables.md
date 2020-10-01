@@ -88,6 +88,72 @@ other languages)
 A value cannot be assigned to a void but a function can potentially return nothing, hence having
 a `void` return type.
 
+### User-defined types
+
+There are 3 categories of user-defined types:
+
+#### Enumerations
+
+A set of possible values; great for creating categorical concepts.
+
+In C++, enums use integers under the hood
+
+```c++
+# Declaring an enum of colors
+enum class Color {
+    BLUE,
+    GREEN,
+    YELLOW,
+    RED
+};
+
+# Initializing an enum value
+Color color = Color::RED;
+```
+
+Use [switch statement](conditionals.md) to conditionally branch based on enum value
+
+```c++
+Color color = Color::RED;
+switch (color) {
+    case Color::BLUE: {
+        printf("The color is blue");
+    } break;
+    case Color::RED: {
+        printf("The color is red");
+    } break;
+    default: {
+        printf("The color is ???");
+    } break;
+}
+```
+
+#### Classes
+
+Classes contain data and functions (state and behavior).
+ 
+Simplest kind of class is a POD -- (Plain old data classes)
+
+```c++
+struct Book {
+    char name[256];
+    int year;
+    int pages;
+};
+
+# Declaring
+int main() {
+    Book myBook; // Auto initialized
+    myBook.year = 1999;
+    printf("The book year is %d", myBook.year)
+    return 0;
+}
+```
+
+
+
+#### Unions
+
 ## Variables
 
 ### Declaring
@@ -111,3 +177,4 @@ int counter = 0;
 int counter;
 counter = 0;
 ```
+

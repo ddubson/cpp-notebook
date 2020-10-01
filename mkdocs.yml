@@ -3,7 +3,7 @@ theme: readthedocs
 nav:
   - 'Hello World': 'index.md'
   - 'Types & Variables': 'types-n-variables.md'
-  - 'Conditionals': 'conditionals.md'
+  - 'Conditionals & Branching': 'conditionals.md'
   - 'Functions': 'functions.md'
   - 'Arrays': 'arrays.md'
   - 'Loops': 'loops.md'

@@ -1,4 +1,4 @@
-# Conditionals
+# Conditionals & Branching
 
 ## Conditional statements
 
@@ -12,5 +12,23 @@ if(2 + 2 == 4) return true;
 if(2 + 2 == 4) {
     printf("Whoa!");
     return true;
+}
+```
+
+## Switch statement
+
+The traditional switch statement
+
+```c++
+switch (<condition>) {
+    case (<case1>): {
+    
+    } break;
+    case (<case2>): {
+    
+    } break;
+    default: {
+    
+    }
 }
 ```
