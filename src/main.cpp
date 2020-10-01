@@ -8,6 +8,8 @@ void sizeOfArrays();
 
 void structs();
 
+void unions();
+
 int main() {
     printf("Hello, world!\n");
 
@@ -38,6 +40,7 @@ int main() {
     sizeOfArrays();
     enums();
     structs();
+    unions();
     return 0;
 }
 
@@ -60,3 +63,19 @@ void structs() {
     myBook.year = 1999;
     printf("The book year is %d\n", myBook.year);
 };
+
+union Variant {
+    int integer;
+    double floating_point;
+};
+
+void unions() {
+    Variant v{}; // declare
+    v.floating_point = 54.0;
+    printf("float is: %f\n", v.floating_point);
+    v.integer = 42;
+    printf("int is: %d\n", v.integer);
+
+    // Dangerous! Since a union may only have one value at a time. This memory location could be reset.
+    printf("float is now: %f\n", v.floating_point);
+}

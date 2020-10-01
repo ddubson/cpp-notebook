@@ -1,5 +1,29 @@
 # Types & Variables
 
+## Variables
+
+### Declaring
+
+To declare a variable is to define it in the program.
+In C++, you must provide the type of the variable first
+
+```c++
+int counter;
+```
+
+### Initializing
+
+To initialize a variable is to bind it to a value;
+
+```c++
+// Declare and initialize
+int counter = 0;
+
+// Initialize after declaration
+int counter;
+counter = 0;
+```
+
 ## Primitive types
 
 Primitive types try to map a direct relationship to the hardware, such as `int` or `Boolean`.
@@ -128,7 +152,7 @@ switch (color) {
 }
 ```
 
-#### Classes
+#### Structs
 
 Classes contain data and functions (state and behavior).
  
@@ -150,31 +174,47 @@ int main() {
 }
 ```
 
+#### Unions 🔥
 
+!!!warning
+    Avoid using Unions -- they lead to dangerous memory corruption if not properly handled 🔥
 
-#### Unions
-
-## Variables
-
-### Declaring
-
-To declare a variable is to define it in the program.
-In C++, you must provide the type of the variable first
+A union type is akin to a logical `OR` type.
 
 ```c++
-int counter;
+union Variant {
+    int integer;
+    double floating_point;
+};
+
+int main() {
+    Variant v{}; // declare
+    v.floating_point = 54.0;
+    printf("float is: %f\n", v.floating_point);
+    v.integer = 42;
+    printf("int is: %d\n", v.integer);
+
+    // Dangerous! Since a union may only have one value at a time. This memory location could be reset.
+    printf("float is now: %f\n", v.floating_point);
+}
 ```
 
-### Initializing
+This is read as `Variant` may either have:
+ 
+- a char sequence
+- an integer
+- a floating point number 
 
-To initialize a variable is to bind it to a value;
+at any time. It cannot have multiple values.
 
-```c++
-// Declare and initialize
-int counter = 0;
+## Classes
 
-// Initialize after declaration
-int counter;
-counter = 0;
-```
+### Methods
+
+### Access controls
+
+### Constructors
+
+### Destructors
+
 
