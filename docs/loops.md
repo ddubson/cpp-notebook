@@ -4,7 +4,7 @@
 
 Traditional for loop with the following structure:
 
-```c++
+```cpp
 for(init-statement; conditional; iteration-statement) {
     // Do things
 }
@@ -12,7 +12,7 @@ for(init-statement; conditional; iteration-statement) {
 
 An example:
 
-```c++
+```cpp
 int sum = 0;
 for(size_t i = 0; i < 100; i++) {
     sum += 2;
@@ -28,7 +28,7 @@ on a particular system. It is more safe to use `size_t` over `int`.
 Iterating over iterable structures can be simplified by using
 the range-based for loop
 
-```c++
+```cpp
 int my_array[] = {1, 2, 3, 4, 5};
 
 for(int x : my_array) {

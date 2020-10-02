@@ -4,7 +4,7 @@ Classes contain data and functions (state and behavior).
  
 Simplest kind of class is a POD -- (Plain old data classes)
 
-```c++
+```cpp
 struct Book {
     char name[256];
     int year;
@@ -24,13 +24,13 @@ int main() {
 
 To initialize a struct (i.e. call its default constructor):
 
-```c++
+```cpp
 Book myBook{}; // The curlies are a call to the constructor
 ```
 
 With multiple constructors, you can call in a similar way:
 
-```c++
+```cpp
 struct Phone {
     int[] calls;
     char[] model;
@@ -44,7 +44,7 @@ struct Phone {
 
 To initialize struct members, inline bind values like so:
 
-```c++
+```cpp
 struct Phone {
     char owner[9] = { "John Doe" }; // Add an extra location for a NULL end of a char array
     int countryCode{1}; // short hand initialize to value 1
@@ -63,7 +63,7 @@ references.
 
 Destructors are in most cases optional and clean up is performed by the compiler as written in native instructions.
 
-```c++
+```cpp
 struct Phone {
     char owner[9] = { "John Doe" };
     int countryCode{1};

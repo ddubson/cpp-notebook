@@ -5,7 +5,7 @@
 To declare a variable is to define it in the program.
 In C++, you must provide the type of the variable first
 
-```c++
+```cpp
 int counter;
 ```
 
@@ -13,7 +13,7 @@ int counter;
 
 To initialize a variable is to bind it to a value;
 
-```c++
+```cpp
 // Declare and initialize
 int counter = 0;
 

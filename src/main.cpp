@@ -1,5 +1,6 @@
 #include <cstdio>
 #include "Color.cpp"
+#include "Pointers.cpp"
 
 // Function prototype/signature
 int doubleTheCounter(int);
@@ -41,6 +42,7 @@ int main() {
     enums();
     structs();
     unions();
+    pointers();
     return 0;
 }
 
@@ -78,10 +80,6 @@ void structs() {
     Phone phone{'a'};
     printf("The phone model is %c\n", phone.model);
 };
-
-
-
-
 
 union Variant {
     int integer;

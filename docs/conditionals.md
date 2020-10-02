@@ -4,7 +4,7 @@
 
 The basic if statement can come in two flavors
 
-```c++
+```cpp
 // Inline
 if(2 + 2 == 4) return true;
 
@@ -19,7 +19,7 @@ if(2 + 2 == 4) {
 
 The traditional switch statement
 
-```c++
+```cpp
 switch (<condition>) {
     case (<case1>): {
     

@@ -5,7 +5,7 @@
 The type of the elements and the number of elements are
 required:
 
-```c++
+```cpp
 int my_array[100]; // an integer array of size 100
 ```
 
@@ -13,7 +13,7 @@ int my_array[100]; // an integer array of size 100
 
 Declaring and initializing an array:
 
-```c++
+```cpp
 int my_array[] = { 1, 2, 3, 4, 5 };
 ```
 
@@ -24,7 +24,7 @@ of the elements.
 
 Access via the bracket syntax
 
-```c++
+```cpp
 int my_array[] = { 1, 2, 3, 4, 5 };
 printf("The 2nd element is %d", my_array[1]);
 ```
@@ -34,7 +34,7 @@ printf("The 2nd element is %d", my_array[1]);
 The `sizeof` operator is used to obtain the total number of bytes in aggregate in an array.
 The evaluation is a compile-time eval with no cost during runtime.
 
-```c++
+```cpp
 int ar[] = { 1, 2, 3, 4, 5 };
 size_t n_elements = sizeof(ar) / sizeof(int); // used a lot in older code, a hack
 ```

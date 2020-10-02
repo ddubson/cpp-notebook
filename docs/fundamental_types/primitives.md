@@ -96,7 +96,7 @@ A set of possible values; great for creating categorical concepts.
 
 In C++, enums use integers under the hood
 
-```c++
+```cpp
 # Declaring an enum of colors
 enum class Color {
     BLUE,
@@ -111,7 +111,7 @@ Color color = Color::RED;
 
 Use [switch statement](../conditionals.md) to conditionally branch based on enum value
 
-```c++
+```cpp
 Color color = Color::RED;
 switch (color) {
     case Color::BLUE: {
@@ -133,7 +133,7 @@ switch (color) {
 
 A union type is akin to a logical `OR` type.
 
-```c++
+```cpp
 union Variant {
     int integer;
     double floating_point;

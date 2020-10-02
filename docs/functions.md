@@ -7,7 +7,7 @@ function must always return the same output).
 
 ## Simple functions
 
-```c++
+```cpp
 // Function prototype to let whoever uses the function know about it.
 // A function prototype is only needed if code above your function uses it.
 int isEven(int)

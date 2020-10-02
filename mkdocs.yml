@@ -1,5 +1,9 @@
 site_name: C++ Notebook
-theme: readthedocs
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - cpp
 nav:
   - 'Hello World': 'index.md'
   - 'Variables': 'variables.md'
@@ -7,10 +11,10 @@ nav:
   - 'Functions': 'functions.md'
   - 'Loops': 'loops.md'
   - 'Fundamental Types':
-    - 'Types & Variables': 'fundamental_types/primitives.md'
+    - 'Primitives': 'fundamental_types/primitives.md'
     - 'Arrays': 'fundamental_types/arrays.md'
     - 'Structs': 'fundamental_types/structs.md'
   - 'Reference Types':
-    - 'Classes': 'reference_types/classes.md'
+    - 'Pointers': 'reference_types/pointers.md'
 markdown_extensions:
   - admonition
