@@ -8,6 +8,9 @@ run-hello-world-g++:
 	@g++ --std=c++11 src/main.cpp -o bin/hello-world
 	@bin/hello-world
 
+tidy:
+	clang-tidy src/** -checks=cppcoreguidelines -header-filter=.*
+
 debug-hello-world:
 	lldb bin/hello-world
 

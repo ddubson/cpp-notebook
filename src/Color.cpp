@@ -1,3 +1,5 @@
+#include <cstdio>
+
 enum class Color {
     BLUE,
     BLACK,

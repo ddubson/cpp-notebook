@@ -1,3 +1,5 @@
+#include <cstdio>
+
 void pointers() {
     // declare and initialize a normal int variable
     int counter{22};
