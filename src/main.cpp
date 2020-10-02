@@ -1,4 +1,5 @@
 #include <cstdio>
+#include "Phone.cpp"
 #include "Color.cpp"
 #include "Pointers.cpp"
 
@@ -43,6 +44,14 @@ int main() {
     structs();
     unions();
     pointers();
+
+    Phone phone{'a'};
+    Phone *phone_ptr = &phone;
+    printf("Is phone blocked: %d\n", phone_ptr->blocked);
+
+    // Use the member-of-operator to access the object and modify its member
+    phone_ptr->blocked = true;
+    printf("Is phone blocked: %d\n", phone_ptr->blocked);
     return 0;
 }
 
@@ -58,18 +67,6 @@ void sizeOfArrays() {
 
 struct Book {
     int year;
-};
-
-struct Phone {
-    char model;
-    char owner[9] = {"John Doe"};
-    int countryCode{1}; // short hand initialize to value 1
-    int number[6]{3, 3, 3, 2, 2, 2}; // standard way of initializing
-    bool blocked = false;
-
-    Phone(char model) {
-        this->model = model;
-    };
 };
 
 void structs() {

@@ -49,3 +49,32 @@ printf("counter address is: %p\n", counter_address);
 printf("The value of counter: %d\n", *counter_address); // -> 44
 printf("counter address is: %p\n", counter_address); // same as last address
 ```
+
+!!!note
+    Think of dereferencing as "get me the value of the object, not its memory address"
+
+## Member-of-Pointer operator (->)
+
+The member-of-pointer operator does two operations:
+
+- It dereferences a pointer
+- It accesses a member of the pointed-to object
+
+```cpp
+struct Phone {
+    bool blocked{false};
+};
+
+int main() {
+    Phone phone{};
+    Phone *phone_ptr = &phone;
+    printf("Is phone blocked: %d\n", phone_ptr->blocked);
+
+    // Use the member-of-operator to access the object and modify its member
+    phone_ptr->blocked = true;
+    printf("Is phone blocked: %d\n", phone_ptr->blocked);
+    
+    // The hard way - dereference and access
+    printf("Is phone blocked: %d\n", (*phone_ptr).blocked);
+}
+```
