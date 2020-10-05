@@ -16,5 +16,6 @@ nav:
     - 'Structs': 'fundamental_types/structs.md'
   - 'Reference Types':
     - 'Pointers': 'reference_types/pointers.md'
+    - 'References': 'reference_types/references.md'
 markdown_extensions:
   - admonition
