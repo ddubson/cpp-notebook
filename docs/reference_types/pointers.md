@@ -136,3 +136,21 @@ Book* third_book_ptr = books + 2;
 
 !!!warning
     Pointers are quite dangerous, spawning vulnerabilities like buffer overflows.
+    
+## void and std::byte Pointers
+
+When the pointed-to type is irrelevant, you can use the `void*` pointer. It can
+never be dereferenced since there is no underlying type to point to.
+
+void pointer arithmetic is forbidden, impossible for a void pointer to have any offsets.
+
+When you want to interact with raw memory at byte level, like copying data between files
+you can use a `std::byte` pointer
+
+## nullptr and Booleans
+
+Pointers can have a special value of `nullptr` -- a pointer that doesn't point
+to anything. Used for indicating that there is no more memory left to allocate
+
+Pointers have an implicit conversion to `bool` -- any pointer that points to something
+is `true` while a nullptr is `false`
