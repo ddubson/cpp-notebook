@@ -78,3 +78,61 @@ int main() {
     printf("Is phone blocked: %d\n", (*phone_ptr).blocked);
 }
 ```
+
+## Pointers and arrays
+
+Pointers and arrays have a lot of similarities. Pointers encode object addresses,
+whereas arrays encode the location and length of contiguous objects.
+
+An array can **decay** into a pointer very easily. A decayed array loses length
+information and becomes a pointer to the first element in the array.
+
+```cpp
+int my_array[]{ 1, 2, 3, 4, 5};
+int* my_array_ptr = my_array;
+```
+
+Here's an example of the ease in which an array can decay into a pointer:
+
+```cpp
+struct Book { 
+    int year{};
+    
+    Book(int year) {
+        this->year = year;
+    }
+};
+
+void print_year(Book* book_ptr) {
+    printf("Book year: %d\n", book_ptr->year);
+}
+
+int main() {
+    Book books[]{ Book(1999), Book(2000), Book(2001)};
+    print_year(books);
+}
+```
+
+### Pointer arithmetic
+
+!!!note
+    **Pointer arithmetic** is the set of rules for addition and subtraction on pointers
+
+To get the n-th element of an array, you have to perform some pointer arithmetic.
+
+Two options:
+
+First approach is with square brackets with address-of (&) operator
+
+```cpp
+Book* third_book_ptr = &books[2];
+```
+
+Second approach is to use arithmetic
+
+```cpp
+Book* third_book_ptr = books + 2;
+```
+
+!!!warning
+    Pointers are quite dangerous, spawning vulnerabilities like buffer overflows.

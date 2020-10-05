@@ -32,10 +32,10 @@ With multiple constructors, you can call in a similar way:
 
 ```cpp
 struct Phone {
-    int[] calls;
-    char[] model;
+    int[50] calls{0};
+    char[200] model{};
     
-    Phone(char[] model) {
+    Phone(char[200] model) {
         this->model = model
     };
 };

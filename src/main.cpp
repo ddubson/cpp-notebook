@@ -1,6 +1,7 @@
 #include <cstdio>
 #include "Phone.cpp"
 #include "Color.cpp"
+#include "Book.cpp"
 #include "Pointers.cpp"
 
 // Function prototype/signature
@@ -11,6 +12,8 @@ void sizeOfArrays();
 void structs();
 
 void unions();
+
+void print_year(Book*);
 
 int main() {
     printf("Hello, world!\n");
@@ -52,6 +55,9 @@ int main() {
     // Use the member-of-operator to access the object and modify its member
     phone_ptr->blocked = true;
     printf("Is phone blocked: %d\n", phone_ptr->blocked);
+
+    Book books[] { Book{1999}, Book(2000) };
+    print_year(books);
     return 0;
 }
 
@@ -65,12 +71,12 @@ void sizeOfArrays() {
     printf("The number of elements in the array is: %zu\n", n_elements);
 }
 
-struct Book {
-    int year;
-};
+void print_year(Book* book_ptr) {
+    printf("Book year: %d\n", book_ptr->year);
+}
 
 void structs() {
-    Book myBook{}; // Auto initialized
+    Book myBook{2000}; // Auto initialized
     myBook.year = 1999;
     printf("The book year is %d\n", myBook.year);
 

@@ -40,3 +40,7 @@ size_t n_elements = sizeof(ar) / sizeof(int); // used a lot in older code, a hac
 ```
 
 The `std::size` function from the `<iterator>` header is a more modern approach
+
+## More
+
+- [Pointers and arrays](../reference_types/pointers.md#pointers-and-arrays)
