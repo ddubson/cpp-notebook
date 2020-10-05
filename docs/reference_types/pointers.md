@@ -1,5 +1,8 @@
 # Pointers
 
+!!!warning
+    Pointers are quite dangerous, spawning vulnerabilities like buffer overflows.
+
 Mechanism used to refer to memory addresses. 
 Pointers encode the object's address and object's type.
 
@@ -133,9 +136,6 @@ Second approach is to use arithmetic
 ```cpp
 Book* third_book_ptr = books + 2;
 ```
-
-!!!warning
-    Pointers are quite dangerous, spawning vulnerabilities like buffer overflows.
     
 ## void and std::byte Pointers
 

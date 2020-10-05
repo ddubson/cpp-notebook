@@ -1,11 +1,12 @@
 #include <cstdio>
+#include "1_declaring_variables.cpp"
+#include "2_functions.cpp"
 #include "Phone.cpp"
 #include "Color.cpp"
 #include "Book.cpp"
 #include "Pointers.cpp"
+#include "references.cpp"
 
-// Function prototype/signature
-int doubleTheCounter(int);
 
 void sizeOfArrays();
 
@@ -18,16 +19,9 @@ void print_year(Book*);
 int main() {
     printf("Hello, world!\n");
 
-    int counter; // declare a variable
-    counter = 22; // initialize a variable
-    printf("%d is my counter\n", counter); // printf with a format specifier of %d (i.e. digit)
+    declaring_variables();
 
-    if (counter % 2 == 0) {
-        printf("The counter is really even\n");
-    }
-
-    counter = doubleTheCounter(counter);
-    printf("The counter is doubled at %d\n", counter);
+    functions();
 
     int my_array[] = {1, 2, 3, 4, 5};
     printf("The 2nd element is %d\n", my_array[1]);
@@ -58,11 +52,9 @@ int main() {
 
     Book books[] { Book{1999}, Book(2000) };
     print_year(books);
-    return 0;
-}
 
-int doubleTheCounter(int counter) {
-    return counter * 2;
+    references();
+    return 0;
 }
 
 void sizeOfArrays() {
