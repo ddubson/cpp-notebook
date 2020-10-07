@@ -8,5 +8,8 @@ void declaring_variables() {
     if (counter % 2 == 0) {
         printf("The counter is really even\n");
     }
+
+    // Constant variables cannot be changed after initialized
+    const int life = 42;
 }
 

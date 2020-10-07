@@ -1,7 +1,7 @@
 #include <cstdio>
 
 void print_year(Book& book) { // reference to book
-    printf("Book year: %d", book.year);
+    printf("Book year: %d\n", book.year);
 }
 
 void references() {

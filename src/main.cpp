@@ -6,6 +6,7 @@
 #include "Book.cpp"
 #include "Pointers.cpp"
 #include "references.cpp"
+#include "classes.cpp"
 
 
 void sizeOfArrays();
@@ -54,6 +55,7 @@ int main() {
     print_year(books);
 
     references();
+    classes();
     return 0;
 }
 

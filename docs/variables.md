@@ -21,3 +21,13 @@ int counter = 0;
 int counter;
 counter = 0;
 ```
+
+### const
+
+C++ supports declaring variables as immutable via
+the `const` operator
+
+```cpp
+const int life = 42;
+life = 41; // ERROR! cannot change value
+```
