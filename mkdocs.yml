@@ -17,5 +17,6 @@ nav:
   - 'Reference Types':
     - 'Pointers': 'reference_types/pointers.md'
     - 'References': 'reference_types/references.md'
+    - 'Classes': 'reference_types/classes.md'
 markdown_extensions:
   - admonition
