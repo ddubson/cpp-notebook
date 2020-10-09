@@ -13,6 +13,8 @@ void sizeOfArrays();
 
 void structs();
 
+void type_inference();
+
 void unions();
 
 void print_year(Book*);
@@ -56,7 +58,14 @@ int main() {
 
     references();
     classes();
+
+    type_inference();
     return 0;
+}
+
+void type_inference() {
+    auto pi { 3.14f };
+    printf("PI is %f\n", pi);
 }
 
 void sizeOfArrays() {

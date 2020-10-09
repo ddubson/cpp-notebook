@@ -24,3 +24,33 @@ void classes() {
     printf("Number of strings: %d\n", guitar.get_number_of_strings());
 }
 ```
+
+!!!note
+    Holders of `const` references cannot invoke methods that are not
+    const
+    
+## const member variables
+
+Class member variables that cannot be modified after their initialization
+
+```cpp
+class Book {
+public:
+    const int year = 2000;
+};
+```
+
+## Member initializer lists
+
+Primary mechanism for initializing class members. They help with
+initializing members via constructor like so:
+
+```cpp
+class Book {
+    int year;
+    char* title;
+    
+public:
+    Book(int year, char* title): year { year }, title { title } {}
+};
+```
