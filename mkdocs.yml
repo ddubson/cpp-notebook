@@ -10,7 +10,7 @@ nav:
   - 'Conditionals & Branching': 'conditionals.md'
   - 'Functions': 'functions.md'
   - 'Loops': 'loops.md'
-  - 'Type Inference: 'type_inference.md'
+  - 'Type Inference': 'type_inference.md'
   - 'Fundamental Types':
     - 'Primitives': 'fundamental_types/primitives.md'
     - 'Arrays': 'fundamental_types/arrays.md'
