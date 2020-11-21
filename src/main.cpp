@@ -7,7 +7,7 @@
 #include "Pointers.cpp"
 #include "references.cpp"
 #include "classes.cpp"
-
+#include "storage_durations.cpp"
 
 void sizeOfArrays();
 
@@ -60,6 +60,7 @@ int main() {
     classes();
 
     type_inference();
+    storage_durations_example();
     return 0;
 }
 
